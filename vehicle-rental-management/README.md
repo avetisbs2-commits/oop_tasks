@@ -2,7 +2,7 @@
 
 ## Goal
 
-Complete all unfinished methods and make `Main.java` produce correct console output.
+Complete all unfinished methods and make `MainVehicle.java` produce correct console output.
 
 Do not redesign the project. Use the existing classes, methods, and structure.
 

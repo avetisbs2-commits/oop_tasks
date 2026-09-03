@@ -20,7 +20,10 @@ public class Van extends Vehicle {
         // TODO:
         // Return van information as text.
         // Include brand, model, status, and cargo capacity.
-        return "";
+        return "Van brand: " + getBrand()
+                + ", model: " + getModel()
+                + ", status: " + getStatus()
+                + " Cargo capacity " + getCargoCapacity();
     }
 
     @Override
@@ -28,19 +31,20 @@ public class Van extends Vehicle {
         // TODO:
         // Calculate rental price for a van.
         // Add 15% to the base price.
-        return 0;
+        return getPricePerDay() * days - (getPricePerDay() * days) * ((double) 100 /15);
     }
 
     @Override
     public void rent() {
         // TODO:
         // Change the van status when it is rented.
+        setStatus(VehicleStatus.RENTED);
     }
 
     @Override
     public void returnVehicle() {
         // TODO:
-        // Change the van status when it is returned.
+        // Change the vsn status when it is returned.
+        setStatus(VehicleStatus.AVAILABLE);
     }
 }
-

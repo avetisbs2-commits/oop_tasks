@@ -30,7 +30,11 @@ public class Car extends Vehicle {
         // TODO:
         // Return car information as text.
         // Include brand, model, status, number of doors, and transmission type.
-        return "";
+        return "Car brand: " + getBrand()
+                + ", model: " + getModel()
+                + ", status: " + getStatus()
+                + ", number of doors: " + getNumberOfDoors()
+                + " Is automatic" + isAutomatic();
     }
 
     @Override
@@ -38,19 +42,21 @@ public class Car extends Vehicle {
         // TODO:
         // Calculate rental price for a car.
         // Use pricePerDay * days.
-        return 0;
+        return getPricePerDay() * days;
     }
 
     @Override
     public void rent() {
         // TODO:
         // Change the car status when it is rented.
+        setStatus(VehicleStatus.RENTED);
     }
 
     @Override
     public void returnVehicle() {
         // TODO:
         // Change the car status when it is returned.
+        setStatus(VehicleStatus.AVAILABLE);
     }
 }
 

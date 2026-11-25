@@ -18,7 +18,7 @@ public class Circle implements Shape {
     @Override
     public double area() {
         // TODO INT-2: Իրականացրու և ջնջիր հետևյալ տողը
-        throw new UnsupportedOperationException("TODO INT-2: Circle.area");
+        return Math.PI * radius * radius;
     }
 
     @Override

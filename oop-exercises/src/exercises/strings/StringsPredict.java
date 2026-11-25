@@ -15,19 +15,19 @@ public final class StringsPredict {
     }
 
     // 1)  String a = "java";  String b = "java";               a == b
-    public static final String PREDICTION_1 = "";   // TODO STR-P1: գրիր "true" կամ "false"
+    public static final String PREDICTION_1 = "true";   // TODO STR-P1: գրիր "true" կամ "false"
 
     // 2)  new String("java") == "java"
-    public static final String PREDICTION_2 = "";   // TODO STR-P2
+    public static final String PREDICTION_2 = "false";   // TODO STR-P2
 
     // 3)  new String("java").equals("java")
-    public static final String PREDICTION_3 = "";   // TODO STR-P3
+    public static final String PREDICTION_3 = "true";   // TODO STR-P3
 
     // 4)  String p = "ja";   (p + "va") == "java"               (գումարումը կատարվում է աշխատանքի ժամանակ)
-    public static final String PREDICTION_4 = "";   // TODO STR-P4
+    public static final String PREDICTION_4 = "false";   // TODO STR-P4
 
     // 5)  String p = "ja";   (p + "va").intern() == "java"
-    public static final String PREDICTION_5 = "";   // TODO STR-P5
+    public static final String PREDICTION_5 = "true";   // TODO STR-P5
 
     public static final String[] PREDICTIONS = {
             PREDICTION_1, PREDICTION_2, PREDICTION_3, PREDICTION_4, PREDICTION_5

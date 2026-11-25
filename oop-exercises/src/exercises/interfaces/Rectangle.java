@@ -21,7 +21,7 @@ public class Rectangle implements Shape {
     @Override
     public double area() {
         // TODO INT-1: Իրականացրու և ջնջիր հետևյալ տողը
-        throw new UnsupportedOperationException("TODO INT-1: Rectangle.area");
+        return width * height;
     }
 
     @Override

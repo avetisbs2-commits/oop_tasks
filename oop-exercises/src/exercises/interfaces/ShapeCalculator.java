@@ -24,6 +24,8 @@ public final class ShapeCalculator {
      */
     public static double totalArea(List<Shape> shapes) {
         // TODO INT-3: Իրականացրու և ջնջիր հետևյալ տողը
-        throw new UnsupportedOperationException("TODO INT-3: totalArea");
+        double total = 0;
+        for (Shape shape : shapes) { total += shape.area(); }
+        return total;
     }
 }

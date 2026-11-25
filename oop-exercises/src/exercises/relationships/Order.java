@@ -31,7 +31,7 @@ public class Order {
      */
     public void addLine(String product, int quantity, long unitPriceCents) {
         // TODO REL-3: Իրականացրու և ջնջիր հետևյալ տողը
-        throw new UnsupportedOperationException("TODO REL-3: addLine");
+        lines.add(new OrderLine(product, quantity, unitPriceCents));
     }
 
     /**
@@ -43,7 +43,7 @@ public class Order {
      */
     public long totalCents() {
         // TODO REL-4: Իրականացրու և ջնջիր հետևյալ տողը
-        throw new UnsupportedOperationException("TODO REL-4: totalCents");
+        long total = 0;    for (OrderLine line : lines) { total += line.totalCents(); }   return total;
     }
 
     public List<OrderLine> getLines() {

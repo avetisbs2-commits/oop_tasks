@@ -1,5 +1,6 @@
 package exercises.polymorphism;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -24,6 +25,8 @@ public final class Zoo {
      */
     public static String chorus(List<Animal> animals) {
         // TODO POL-3: Իրականացրու և ջնջիր հետևյալ տողը
-        throw new UnsupportedOperationException("TODO POL-3: chorus");
+        List<String> sounds = new ArrayList<>();
+        for (Animal animal : animals) { sounds.add(animal.sound()); }
+        return String.join(", ", sounds);
     }
 }

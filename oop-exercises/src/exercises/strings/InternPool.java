@@ -19,6 +19,10 @@ public final class InternPool {
      */
     public static String canonical(String text) {
         // TODO STR-4: Իրականացրու և ջնջիր հետևյալ տողը
-        throw new UnsupportedOperationException("TODO STR-4: canonical");
+        if (text == null){
+            throw new NullPointerException();
+        }
+
+        return  text.intern();
     }
 }

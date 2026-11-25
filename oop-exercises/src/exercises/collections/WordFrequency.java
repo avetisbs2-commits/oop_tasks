@@ -1,5 +1,6 @@
 package exercises.collections;
 
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -26,6 +27,10 @@ public final class WordFrequency {
      */
     public static Map<String, Integer> countWords(List<String> words) {
         // TODO COL-3: Իրականացրու և ջնջիր հետևյալ տողը
-        throw new UnsupportedOperationException("TODO COL-3: countWords");
+        LinkedHashMap<String, Integer> linkedHashMap = new LinkedHashMap<>();
+        for (String word : words ){
+            linkedHashMap.merge(word, 1, Integer::sum);
+        }
+        return linkedHashMap;
     }
 }

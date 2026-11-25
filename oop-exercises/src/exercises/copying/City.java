@@ -37,7 +37,7 @@ public class City {
      */
     public City copy() {
         // TODO CPY-1: Իրականացրու և ջնջիր հետևյալ տողը
-        throw new UnsupportedOperationException("TODO CPY-1: City.copy");
+        return new City(name, population);
     }
 
     @Override

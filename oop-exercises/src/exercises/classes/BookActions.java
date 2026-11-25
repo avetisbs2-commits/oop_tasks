@@ -19,6 +19,7 @@ public final class BookActions {
      */
     public static Book rename(Book book, String newTitle) {
         // TODO CLS-4: Իրականացրու և ջնջիր հետևյալ տողը
-        throw new UnsupportedOperationException("TODO CLS-4: rename");
+        book.setTitle(newTitle);
+        return book;
     }
 }

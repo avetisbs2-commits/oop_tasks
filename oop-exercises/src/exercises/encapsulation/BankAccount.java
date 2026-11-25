@@ -31,7 +31,10 @@ public class BankAccount {
      */
     public void deposit(long amountCents) {
         // TODO ENC-1: Իրականացրու և ջնջիր հետևյալ տողը
-        throw new UnsupportedOperationException("TODO ENC-1: deposit");
+        if (amountCents <= 0){
+            throw new IllegalArgumentException("...");
+        }
+        balanceCents += amountCents;
     }
 
     /**
@@ -44,7 +47,12 @@ public class BankAccount {
      */
     public void withdraw(long amountCents) {
         // TODO ENC-2: Իրականացրու և ջնջիր հետևյալ տողը
-        throw new UnsupportedOperationException("TODO ENC-2: withdraw");
+        if (amountCents <= 0 ){
+            throw new IllegalArgumentException("...");
+        }else if (amountCents > balanceCents){
+            throw new IllegalStateException ("մն ացորդը մնում է 1000");
+        }
+        balanceCents -= amountCents;
     }
 
     public String getOwner() {

@@ -15,9 +15,8 @@ public class Truck extends Vehicle {
      * Օրինակ.  new Truck("Volvo", 2018, 5000).getBrand() -> "Volvo"
      */
     public Truck(String brand, int year, int cargoCapacityKg) {
-        super("TODO", 0);   // TODO INH-1: փոխիր՝ փոխանցիր brand և year
-        // TODO INH-1: վերագրիր cargoCapacityKg-ը և ջնջիր հետևյալ տողը
-        throw new UnsupportedOperationException("TODO INH-1: Truck constructor");
+        super(brand, year);
+        this.cargoCapacityKg = cargoCapacityKg;
     }
 
     /**
@@ -28,7 +27,7 @@ public class Truck extends Vehicle {
     @Override
     public String describe() {
         // TODO INH-2: Իրականացրու և ջնջիր հետևյալ տողը
-        throw new UnsupportedOperationException("TODO INH-2: Truck.describe");
+        return super.describe() + ", cargo: " + cargoCapacityKg + " kg";
     }
 
     public int getCargoCapacityKg() {

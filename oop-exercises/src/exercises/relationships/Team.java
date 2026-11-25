@@ -27,7 +27,7 @@ public class Team {
      */
     public void addPlayer(Player player) {
         // TODO REL-1: Իրականացրու և ջնջիր հետևյալ տողը
-        throw new UnsupportedOperationException("TODO REL-1: addPlayer");
+        players.add(player);
     }
 
     /**
@@ -37,7 +37,7 @@ public class Team {
      */
     public boolean removePlayer(Player player) {
         // TODO REL-2: Իրականացրու և ջնջիր հետևյալ տողը
-        throw new UnsupportedOperationException("TODO REL-2: removePlayer");
+        return players.remove(player);
     }
 
     public List<Player> getPlayers() {

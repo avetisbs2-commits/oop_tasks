@@ -1,5 +1,6 @@
 package exercises.strings;
 
+
 /**
  * ՎԱՐԺՈՒԹՅՈՒՆ 2. Տեքստի պարզ մշակում։
  * Այս վարժություններում տեքստը երբեք null չէ։
@@ -20,8 +21,14 @@ public final class TextProcessing {
      */
     public static boolean isPalindrome(String word) {
         // TODO STR-2: Իրականացրու և ջնջիր հետևյալ տողը
-        throw new UnsupportedOperationException("TODO STR-2: isPalindrome");
+        if (word == null){
+            return false;
+        }
+        String string = word.toLowerCase();
+        String reversed = new StringBuilder(string).reverse().toString();
+        return string.equals(reversed);
     }
+
 
     /**
      * TODO STR-3. Հաշվիր ձայնավորների քանակը (a, e, i, o, u). մեծատառ/փոքրատառը նշանակություն չունի։
@@ -33,6 +40,14 @@ public final class TextProcessing {
      */
     public static int countVowels(String text) {
         // TODO STR-3: Իրականացրու և ջնջիր հետևյալ տողը
-        throw new UnsupportedOperationException("TODO STR-3: countVowels");
+        int count = 0;
+
+        for (int i = 0; i < text.length(); i++) {
+            char c = text.toLowerCase().charAt(i);
+            if ("aeiou".indexOf(c) >= 0) {
+                count++;
+            }
+        }
+        return count;
     }
 }

@@ -18,6 +18,7 @@ public final class AccountTools {
      */
     public static void transfer(BankAccount from, BankAccount to, long amountCents) {
         // TODO ENC-3: Իրականացրու և ջնջիր հետևյալ տողը
-        throw new UnsupportedOperationException("TODO ENC-3: transfer");
+        from.withdraw(amountCents);
+        to.deposit(amountCents);
     }
 }

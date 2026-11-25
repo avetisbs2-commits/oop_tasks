@@ -1,5 +1,6 @@
 package exercises.collections;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -25,6 +26,12 @@ public final class ListFilter {
      */
     public static List<String> longWords(List<String> words, int minLength) {
         // TODO COL-1: Իրականացրու և ջնջիր հետևյալ տողը
-        throw new UnsupportedOperationException("TODO COL-1: longWords");
+        ArrayList<String> strings = new ArrayList<>();
+        for (String word : words){
+            if (word != null && word.length() >= minLength){
+                strings.add(word);
+            }
+        }
+        return strings;
     }
 }

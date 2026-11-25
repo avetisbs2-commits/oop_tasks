@@ -16,6 +16,6 @@ public class Cat extends Animal {
     @Override
     public String sound() {
         // TODO POL-1: Իրականացրու և ջնջիր հետևյալ տողը
-        throw new UnsupportedOperationException("TODO POL-1: Cat.sound");
+        return "Meow";
     }
 }

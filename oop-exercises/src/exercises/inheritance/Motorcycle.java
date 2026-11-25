@@ -11,10 +11,10 @@ public class Motorcycle extends Vehicle {
      * (Այժմ super-ում փոխարինող արժեքներ են՝ "TODO", 0. փոխիր դրանք։)
      * Օրինակ.  new Motorcycle("Ural", 1980, true).hasSidecar() -> true
      */
+
     public Motorcycle(String brand, int year, boolean hasSidecar) {
-        super("TODO", 0);   // TODO INH-3: փոխիր՝ փոխանցիր brand և year
-        // TODO INH-3: վերագրիր hasSidecar-ը և ջնջիր հետևյալ տողը
-        throw new UnsupportedOperationException("TODO INH-3: Motorcycle constructor");
+        super(brand, year);
+        this.hasSidecar = hasSidecar;
     }
 
     /**
@@ -25,8 +25,8 @@ public class Motorcycle extends Vehicle {
      */
     @Override
     public String describe() {
-        // TODO INH-4: Իրականացրու և ջնջիր հետևյալ տողը
-        throw new UnsupportedOperationException("TODO INH-4: Motorcycle.describe");
+        String sidecarText = hasSidecar ? ", with sidecar" : ", no sidecar";
+        return super.describe() + sidecarText;
     }
 
     public boolean hasSidecar() {

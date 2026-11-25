@@ -1,5 +1,7 @@
 package exercises.collections;
 
+import java.util.ArrayList;
+import java.util.LinkedHashSet;
 import java.util.List;
 
 /**
@@ -29,6 +31,12 @@ public final class DuplicateRemoval {
      */
     public static List<String> removeDuplicates(List<String> items) {
         // TODO COL-2: Իրականացրու և ջնջիր հետևյալ տողը
-        throw new UnsupportedOperationException("TODO COL-2: removeDuplicates");
+        LinkedHashSet<String> linkedHashSet = new LinkedHashSet<>();
+        for (String item : items){
+            if (item != null){
+                linkedHashSet.add(item);
+            }
+        }
+        return new ArrayList<>(linkedHashSet);
     }
 }

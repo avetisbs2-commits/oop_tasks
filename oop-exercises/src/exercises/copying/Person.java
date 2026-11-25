@@ -1,5 +1,6 @@
 package exercises.copying;
 
+
 /**
  * Person ունի անուն (String. անփոփոխ) և քաղաք (City. ՓՈՓՈԽԵԼԻ օբյեկտ)։
  *
@@ -40,8 +41,8 @@ public class Person {
      * Հուշում. նայիր shallowCopy()-ին. տարբերությունը մեկ բառ է. city-ի փոխարեն օգտագործիր city.copy()։
      */
     public Person deepCopy() {
-        // TODO CPY-2: Իրականացրու և ջնջիր հետևյալ տողը
-        throw new UnsupportedOperationException("TODO CPY-2: Person.deepCopy");
+        City cityCopy = (city == null) ? null : city.copy();
+        return new Person(name, cityCopy);
     }
 
     @Override

@@ -25,6 +25,9 @@ public final class NullSafeComparison {
      */
     public static boolean safeEquals(String a, String b) {
         // TODO STR-1: Իրականացրու և ջնջիր հետևյալ տողը
-        throw new UnsupportedOperationException("TODO STR-1: safeEquals");
+        if (a == null || b == null) {
+            return a == b;
+        }
+        return a.equals(b);
     }
 }

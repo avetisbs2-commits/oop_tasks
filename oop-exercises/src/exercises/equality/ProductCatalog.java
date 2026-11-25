@@ -1,6 +1,7 @@
 package exercises.equality;
 
 import java.util.Collection;
+import java.util.HashSet;
 
 /**
  * ՎԱՐԺՈՒԹՅՈՒՆ 2. HashSet-ը և կրկնվող Product-ները։
@@ -22,6 +23,8 @@ public final class ProductCatalog {
      */
     public static int countDistinct(Collection<Product> products) {
         // TODO EQL-3: Իրականացրու և ջնջիր հետևյալ տողը
-        throw new UnsupportedOperationException("TODO EQL-3: countDistinct");
+        HashSet<Product> hashSet = new HashSet<>();
+        hashSet.addAll(products);
+        return hashSet.size();
     }
 }

@@ -19,6 +19,9 @@ public final class CopyTools {
      */
     public static boolean copyIsIndependent(Person original) {
         // TODO CPY-3: Իրականացրու և ջնջիր հետևյալ տողը
-        throw new UnsupportedOperationException("TODO CPY-3: copyIsIndependent");
+        String before = original.getCity().getName();
+        Person copy = original.deepCopy();
+        copy.getCity().setName("CHANGED");
+        return original.getCity().getName().equals(before);
     }
 }

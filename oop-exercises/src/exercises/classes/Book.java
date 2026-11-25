@@ -21,9 +21,12 @@ public class Book {
      *   2. Ավելացրու createdCount-ը 1-ով (createdCount++)։
      * Օրինակ.  new Book("Java", "Gosling", 400)  -> getTitle() = "Java", getPages() = 400
      */
+
     public Book(String title, String author, int pages) {
-        // TODO CLS-1: Իրականացրու և ջնջիր հետևյալ տողը
-        throw new UnsupportedOperationException("TODO CLS-1: Book constructor");
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        createdCount++;
     }
 
     /**
@@ -32,7 +35,7 @@ public class Book {
      */
     public boolean isLong() {
         // TODO CLS-2: Իրականացրու և ջնջիր հետևյալ տողը
-        throw new UnsupportedOperationException("TODO CLS-2: isLong");
+        return this.pages >= LONG_BOOK_PAGES;
     }
 
     /**
@@ -43,7 +46,7 @@ public class Book {
     @Override
     public String toString() {
         // TODO CLS-3: Իրականացրու և ջնջիր հետևյալ տողը
-        throw new UnsupportedOperationException("TODO CLS-3: toString");
+        return title + " by " + author + " (" + pages + " pages)";
     }
 
     public String getTitle() {

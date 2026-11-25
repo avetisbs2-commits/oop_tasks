@@ -15,6 +15,6 @@ public class Duck extends Animal {
     @Override
     public String sound() {
         // TODO POL-2: Իրականացրու և ջնջիր հետևյալ տողը
-        throw new UnsupportedOperationException("TODO POL-2: Duck.sound");
+        return  "Quack";
     }
 }

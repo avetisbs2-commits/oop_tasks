@@ -36,7 +36,13 @@ public class Product {
     @Override
     public boolean equals(Object o) {
         // TODO EQL-1: Իրականացրու և ջնջիր հետևյալ տողը
-        throw new UnsupportedOperationException("TODO EQL-1: Product.equals");
+        if (this == o) {
+            return true;
+        }else if (o == null || getClass() != o.getClass()){
+            return false;
+        }Product other = (Product) o;
+        return id.equals(other.id);
+
     }
 
     /**
@@ -48,7 +54,7 @@ public class Product {
     @Override
     public int hashCode() {
         // TODO EQL-2: Իրականացրու և ջնջիր հետևյալ տողը
-        throw new UnsupportedOperationException("TODO EQL-2: Product.hashCode");
+        return id.hashCode();
     }
 
     public String getId() {
